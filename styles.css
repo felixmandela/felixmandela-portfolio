@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+body {
+    font: 300 16px/1.5 "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #111;
+    background-color: #fdfdfd;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
 li {
     list-style-type: none;
 }
@@ -20,13 +29,14 @@ nav {
 }
 
 .container {
-    max-width: 850px;
+    max-width: 700px;
     height: 60px;
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: center;
     margin: auto;
+    row-gap: 20px;
 }
 
 nav .container {
@@ -124,8 +134,9 @@ section {
     flex-direction: row;
     background-color: #fdfdfd;
     border: 1px solid #e8e8e8;
-    padding: 24px;
     border-radius: 4px;
+    padding: 24px;
+    min-height: 200px;
 }
 
 .timeline-container:nth-of-type(2),
@@ -136,4 +147,111 @@ section {
 
 .timeline-logo {
     min-width: 30%;
+}
+
+.testimonial-section .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    height: auto;
+}
+
+.testimonials-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    background-color: #fdfdfd;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    padding: 20px;
+    column-gap: 50px;
+}
+
+.testimonial-quote {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto 16px;
+    background: url("https://ndrewtl.github.io/airspace-jekyll/img/cotation.png") no-repeat center;
+}
+
+.testimonials-box-wrapper {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#testimonials-box {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.4s ease-in-out;
+    padding: 10px;
+}
+
+#testimonial-message {
+    margin-top: 20px;
+}
+
+#testimonial-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 40px;
+}
+
+#testimonial-name {
+    margin-top: 10px;
+}
+
+#testimonial-role {
+    font-size: 14px;
+}
+
+
+
+#testimonials-dots {
+    margin-top: auto;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    display: inline-block;
+    row-gap: 5px;
+    height: 6px;
+    width: 6px;
+    background-color: #bbb;
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+#arrow-before,
+#arrow-next {
+    height: 30px;
+    border: none;
+    background-color: #fdfdfd;
+    cursor: pointer;
+}
+
+#arrow-before:disabled,
+#arrow-next:disabled {
+    cursor: unset;
 }

@@ -6,21 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felix Mandela - Personal Website</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/cac5f5b001.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <nav>
             <div class="container">
-                <div class="personal-name">
-                    <h1>Felix Mandela</h1>
-                </div>
+                <a href="#">Felix Mandela</a>
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
                     <li><a href="#portfolios">Portfolios</a></li>
                     <li><a href="#timeline">Timeline</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#testimonial">Testimonials</a></li>
                 </ul>
             </div>
         </nav>
@@ -107,40 +104,31 @@
             </div>
         </section>
 
-        <section id="projects" class="projects-section">
+        <section id="testimonial" class="testimonial-section">
             <div class="container">
-                <h2>Projects</h2>
-                <ul>
-                    <li>
-                        <h3>Project 1</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in placerat nunc. Duis sit amet
-                            urna dolor.</p>
-                    </li>
-                    <li>
-                        <h3>Project 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in placerat nunc. Duis sit amet
-                            urna dolor.</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
+                <h2 class="section-header">Testimonials</h2>
+                <div class="testimonials-wrapper">
+                    <button id="arrow-before" class="fas fa-angle-left fa-xl">
+                    </button>
+                    <div class="testimonials-box-wrapper">
+                        <div id="testimonials-box"></div>
+                        <div id="testimonials-dots"></div>
+                    </div>
+                    <button id="arrow-next" class="fas fa-angle-right fa-xl">
+                    </button>
 
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2>Contact Me</h2>
-                <p>Email: thea@example.com</p>
-                <p>Phone: 123-456-7890</p>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Thea Doe. All rights reserved.</p>
+            <p>&copy; 2023 Felix Mandela. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 
 </body>
 
