@@ -2,15 +2,21 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font: 300 16px/1.5 "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
 }
 
 body {
-    font: 300 16px/1.5 "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: #111;
     background-color: #fdfdfd;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 li {
@@ -21,12 +27,16 @@ a {
     text-decoration: none;
 }
 
+
+
 nav {
     width: 100%;
     position: fixed;
     top: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #e8e8e8;
 }
+
+
 
 .container {
     max-width: 700px;
@@ -36,11 +46,18 @@ nav {
     justify-content: start;
     align-items: center;
     margin: auto;
-    row-gap: 20px;
 }
 
 nav .container {
     justify-content: space-between;
+}
+
+nav a {
+    color: #111;
+}
+
+#site-title {
+    font-size: 1.5rem;
 }
 
 .nav-links {
@@ -67,9 +84,18 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    height: 300px;
+    height: auto;
 }
 
+.home-section span {
+    vertical-align: middle;
+}
+
+.home-section h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
 
 .portfolios-section .container {
     display: flex;
@@ -135,8 +161,8 @@ section {
     background-color: #fdfdfd;
     border: 1px solid #e8e8e8;
     border-radius: 4px;
-    padding: 24px;
-    min-height: 200px;
+    padding: 25px;
+    min-height: auto;
 }
 
 .timeline-container:nth-of-type(2),
@@ -146,8 +172,43 @@ section {
 }
 
 .timeline-logo {
-    min-width: 30%;
+    max-width: 20%;
+    margin-right: 20px;
+    object-fit: contain;
+    align-self: flex-start;
+    border-radius: 50%;
 }
+
+.timeline-date {
+    font-size: 12px;
+}
+
+.timeline-role {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.timeline-detail {
+    margin-top: 15px
+}
+
+.wave {
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: rgb(255, 166, 1);
+}
+
+.remote {
+    font-size: 11px;
+    background-color: rgb(247, 255, 235);
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding: 2px 8px;
+    vertical-align: middle;
+}
+
+
 
 .testimonial-section .container {
     display: flex;
@@ -168,7 +229,7 @@ section {
     border: 1px solid #e8e8e8;
     border-radius: 4px;
     padding: 20px;
-    column-gap: 50px;
+    column-gap: 40px;
 }
 
 .testimonial-quote {
@@ -179,7 +240,7 @@ section {
 }
 
 .testimonials-box-wrapper {
-    min-height: 500px;
+    min-height: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -188,7 +249,7 @@ section {
 }
 
 #testimonials-box {
-    height: 450px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
