@@ -87,5 +87,34 @@ function updatePage() {
     getActiveDot()
 }
 
+window.addEventListener('scroll', scrollAnimation1)
+
+
+function scrollAnimation1() {
+    if (window.scrollY <= 200) {
+        document.getElementById("header").style.transform = ""
+        document.getElementById("nav-links").style.transform = ""
+    }
+    if (window.scrollY > 300) {
+        document.getElementById("header").style.transform = "translateY(-30px)"
+        document.getElementById("nav-links").style.transform = "translateX(120px)"
+    }
+    if (window.scrollY > 450) {
+        document.getElementById("header").style.transform = "translateY(-70px)"
+    }
+}
+
+function scrollAnimation2() {
+    if (window.scrollY <= 200) {
+        document.getElementById("nav-links").style.transform = ""
+    }
+    if (window.scrollY > 300) {
+        document.getElementById("nav-links").style.transform = "translateX(120px)"
+    }
+}
+
+function runScrollAnimation() {
+
+}
 
 window.onload = updatePage;

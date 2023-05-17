@@ -6,7 +6,9 @@
 
 }
 
-body {
+body,
+html {
+    scroll-behavior: smooth;
     color: #111;
     background-color: #fdfdfd;
     display: flex;
@@ -15,8 +17,15 @@ body {
     margin: 0 20px;
 }
 
+
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
@@ -32,7 +41,10 @@ header {
     width: 100%;
     position: sticky;
     top: 0;
+    background-color: #fdfdfd;
     border-bottom: 1px solid #e8e8e8;
+    transition: transform 0.4s ease-in-out;
+    z-index: 5;
 }
 
 .container {
@@ -48,6 +60,7 @@ header {
 
 nav .container {
     justify-content: space-between;
+    overflow: hidden;
 }
 
 nav a {
@@ -58,13 +71,14 @@ nav a {
     font-size: 1.5rem;
 }
 
-.nav-links {
+#nav-links {
     display: flex;
     flex-direction: row;
+    transition: transform 0.4s ease-in-out 0.5s;
 }
 
-.nav-links>li {
-    margin-left: 20px;
+#nav-links>li {
+    margin-left: 25px;
 }
 
 
@@ -175,7 +189,6 @@ section {
     border-radius: 50%;
     width: 24px;
     height: 24px;
-    z-index: 1;
     background-color: #fdfdfd;
 }
 
