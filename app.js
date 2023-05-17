@@ -91,16 +91,50 @@ window.addEventListener('scroll', scrollAnimation1)
 
 
 function scrollAnimation1() {
-    if (window.scrollY <= 200) {
-        document.getElementById("header").style.transform = ""
-        document.getElementById("nav-links").style.transform = ""
+    const nameInitial = document.getElementsByClassName("name-initial")
+    const nameHide = document.getElementsByClassName("name-hide")
+    // const navLinkItem = document.getElementsByClassName("nav-link-item")
+    if (window.scrollY <= 150) {
+        for (let i = 0; i < nameInitial.length; i++) {
+            nameInitial[i].style.transform = ""
+        }
+
+        document.getElementById("name-initial-move").style.transform = ""
+
+        for (let i = 0; i < nameHide.length; i++) {
+            nameHide[i].style.opacity = ""
+        }
+        // for (let i = 0; i < navLinkItem.length; i++) {
+        //     navLinkItem[i].style.opacity = ""
+        //     navLinkItem[i].style.transform = ""
+        // }
+        document.getElementById('nav-links').style.opacity = ""
+        document.getElementById('nav-links').style.pointerEvents = ""
+    }
+    if (window.scrollY > 150) {
+        for (let i = 0; i < nameInitial.length; i++) {
+            nameInitial[i].style.transform = ""
+        }
+
+        document.getElementById("name-initial-move").style.transform = "translateX(-37px)"
+
+        for (let i = 0; i < nameHide.length; i++) {
+            nameHide[i].style.opacity = "0"
+        }
+        // for (let i = 0; i < navLinkItem.length; i++) {
+        //     navLinkItem[i].style.opacity = "0"
+        //     navLinkItem[i].style.transform = "translateX(90px)"
+        // }
+        document.getElementById('nav-links').style.opacity = "0"
+        document.getElementById('nav-links').style.pointerEvents = "none"
+
+
     }
     if (window.scrollY > 300) {
-        document.getElementById("header").style.transform = "translateY(-30px)"
-        document.getElementById("nav-links").style.transform = "translateX(120px)"
+
     }
     if (window.scrollY > 450) {
-        document.getElementById("header").style.transform = "translateY(-70px)"
+
     }
 }
 
