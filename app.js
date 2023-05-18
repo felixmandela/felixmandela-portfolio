@@ -15,6 +15,7 @@ function scrollAnimation() {
     const navLinks = document.getElementById("nav-links")
     const siteTitle = document.getElementById("site-title")
     const header = document.getElementById("header")
+
     const startAnimation = 0
     const animationDelay = 0.2
     function animationNumber(n) {
