@@ -16,43 +16,49 @@ function scrollAnimation() {
     const siteTitle = document.getElementById("site-title")
     const header = document.getElementById("header")
 
-    const startAnimation = 0
+
     const animationDelay = 0.2
     function animationNumber(n) {
-        return startAnimation + (animationDelay * n)
+        return 0 + (animationDelay * n)
     }
 
+    function scrollUpAnimation() {
+        // show header
+        setAnimation("transform", header, "", animationNumber(0))
+
+        // move back the text to the original place
+        setAnimation("transform", siteTitle, "", animationNumber(2))
+        setAnimation("transform", nameInitialTwo, "", animationNumber(3))
+
+        // make the text visible
+        setAnimation("opacity", navLinks, "1", animationNumber(3))
+        for (let i = 0; i < nameHide.length; i++) {
+            setAnimation("opacity", nameHide[i], "1", animationNumber(3))
+        }
+    }
+
+    function scrollDownAnimation() {
+        // make text invisible
+        setAnimation("opacity", navLinks, "0", animationNumber(0))
+        for (let i = 0; i < nameHide.length; i++) {
+            setAnimation("opacity", nameHide[i], "0", animationNumber(0))
+        }
+
+        // move the text
+        setAnimation("transform", nameInitialTwo, "translateX(-37px)", animationNumber(0))
+        setAnimation("transform", siteTitle, "translateX(335px)", animationNumber(1))
+
+        // hide header
+        setAnimation("transform", header, "translateY(-100px)", animationNumber(3))
+    }
     if (window.scrollY > 450) {
+
         // scroll up
         if (window.scrollY < currPos) {
-            // show header
-            setAnimation("transform", header, "", animationNumber(0))
-
-            // move back the text to the original place
-            setAnimation("transform", siteTitle, "", animationNumber(1))
-            setAnimation("transform", nameInitialTwo, "", animationNumber(2))
-
-            // make the text visible
-            setAnimation("opacity", navLinks, "1", animationNumber(2))
-            for (let i = 0; i < nameHide.length; i++) {
-                setAnimation("opacity", nameHide[i], "1", animationNumber(2))
-            }
-        } else
-        // scroll down
-        {
-            // make text invisible
-            setAnimation("opacity", navLinks, "0", animationNumber(0))
-            for (let i = 0; i < nameHide.length; i++) {
-                setAnimation("opacity", nameHide[i], "0", animationNumber(0))
-            }
-
-            // move the text
-            setAnimation("transform", nameInitialTwo, "translateX(-37px)", animationNumber(0))
-            setAnimation("transform", siteTitle, "translateX(335px)", animationNumber(1))
-
-            // hide header
-            setAnimation("transform", header, "translateY(-100px)", animationNumber(3))
-
+            scrollUpAnimation()
+        } else {
+            // scroll down
+            scrollDownAnimation()
         }
         currPos = window.scrollY
     }

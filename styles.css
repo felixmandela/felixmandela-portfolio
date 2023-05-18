@@ -131,6 +131,26 @@ nav span {
     margin-bottom: 20px;
 }
 
+.tech-stacks {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.tech-stacks>ul {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+}
+
+.tech-stacks>ul>li {
+    font-size: 14px;
+    padding: 0 10px;
+    margin-left: 10px;
+    border: 2px solid #e8e8e8;
+    border-radius: 10px;
+}
+
 
 /* portfolio */
 
