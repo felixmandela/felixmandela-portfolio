@@ -3,13 +3,8 @@ window.addEventListener('scroll', scrollAnimation)
 let currPos = window.scrollY
 
 
-function setAnimationTransform(elementName, styleValue, animationDelay) {
-    elementName.style.transform = styleValue
-    elementName.style.transitionDelay = `${animationDelay}s`
-}
-
-function setAnimationOpacity(elementName, styleValue, animationDelay) {
-    elementName.style.opacity = styleValue
+function setAnimation(elementStyle, elementName, styleValue, animationDelay) {
+    elementName.style[elementStyle] = styleValue
     elementName.style.transitionDelay = `${animationDelay}s`
 }
 
@@ -22,41 +17,40 @@ function scrollAnimation() {
     const header = document.getElementById("header")
     const startAnimation = 0
     const animationDelay = 0.2
-    const secondAnimation = startAnimation + (animationDelay * 2)
-    const thirdAnimation = startAnimation + (animationDelay * 3)
-    const fourthAnimation = startAnimation + (animationDelay * 4)
-
+    function animationNumber(n) {
+        return startAnimation + (animationDelay * n)
+    }
 
     if (window.scrollY > 450) {
         // scroll up
         if (window.scrollY < currPos) {
             // show header
-            setAnimationTransform(header, "", startAnimation)
+            setAnimation("transform", header, "", animationNumber(0))
 
             // move back the text to the original place
-            setAnimationTransform(siteTitle, "", secondAnimation)
-            setAnimationTransform(nameInitialTwo, "", thirdAnimation)
+            setAnimation("transform", siteTitle, "", animationNumber(1))
+            setAnimation("transform", nameInitialTwo, "", animationNumber(2))
 
             // make the text visible
-            setAnimationOpacity(navLinks, "1", thirdAnimation)
+            setAnimation("opacity", navLinks, "1", animationNumber(2))
             for (let i = 0; i < nameHide.length; i++) {
-                setAnimationOpacity(nameHide[i], "1", thirdAnimation)
+                setAnimation("opacity", nameHide[i], "1", animationNumber(2))
             }
         } else
         // scroll down
         {
             // make text invisible
-            setAnimationOpacity(navLinks, "0", startAnimation)
+            setAnimation("opacity", navLinks, "0", animationNumber(0))
             for (let i = 0; i < nameHide.length; i++) {
-                setAnimationOpacity(nameHide[i], "0", startAnimation)
+                setAnimation("opacity", nameHide[i], "0", animationNumber(0))
             }
 
             // move the text
-            setAnimationTransform(nameInitialTwo, "translateX(-37px)", startAnimation)
-            setAnimationTransform(siteTitle, "translateX(335px)", secondAnimation)
+            setAnimation("transform", nameInitialTwo, "translateX(-37px)", animationNumber(0))
+            setAnimation("transform", siteTitle, "translateX(335px)", animationNumber(1))
 
             // hide header
-            setAnimationTransform(header, "translateY(-100px)", fourthAnimation)
+            setAnimation("transform", header, "translateY(-100px)", animationNumber(3))
 
         }
         currPos = window.scrollY
