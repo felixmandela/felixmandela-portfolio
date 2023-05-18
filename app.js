@@ -16,8 +16,7 @@ function scrollAnimation() {
     const siteTitle = document.getElementById("site-title")
     const header = document.getElementById("header")
 
-
-    const animationDelay = 0.2
+    const animationDelay = 0.25
     function animationNumber(n) {
         return 0 + (animationDelay * n)
     }
@@ -27,13 +26,13 @@ function scrollAnimation() {
         setAnimation("transform", header, "", animationNumber(0))
 
         // move back the text to the original place
-        setAnimation("transform", siteTitle, "", animationNumber(2))
-        setAnimation("transform", nameInitialTwo, "", animationNumber(3))
+        setAnimation("transform", siteTitle, "", animationNumber(1))
+        setAnimation("transform", nameInitialTwo, "", animationNumber(2))
 
         // make the text visible
-        setAnimation("opacity", navLinks, "1", animationNumber(3))
+        setAnimation("opacity", navLinks, "1", animationNumber(2))
         for (let i = 0; i < nameHide.length; i++) {
-            setAnimation("opacity", nameHide[i], "1", animationNumber(3))
+            setAnimation("opacity", nameHide[i], "1", animationNumber(2))
         }
     }
 
@@ -49,7 +48,7 @@ function scrollAnimation() {
         setAnimation("transform", siteTitle, "translateX(335px)", animationNumber(1))
 
         // hide header
-        setAnimation("transform", header, "translateY(-100px)", animationNumber(3))
+        setAnimation("transform", header, "translateY(-100px)", animationNumber(2))
     }
     if (window.scrollY > 450) {
 
