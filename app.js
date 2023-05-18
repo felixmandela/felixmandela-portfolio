@@ -1,3 +1,80 @@
+// navbar animation
+window.addEventListener('scroll', scrollAnimation)
+let currPos = window.scrollY
+
+
+function setAnimationTransform(elementName, styleValue, animationDelay) {
+    elementName.style.transform = styleValue
+    elementName.style.transitionDelay = `${animationDelay}s`
+}
+
+function setAnimationOpacity(elementName, styleValue, animationDelay) {
+    elementName.style.opacity = styleValue
+    elementName.style.transitionDelay = `${animationDelay}s`
+}
+
+
+function scrollAnimation() {
+    const nameHide = document.getElementsByClassName("name-hide")
+    const nameInitialTwo = document.getElementById("name-initial-2")
+    const navLinks = document.getElementById("nav-links")
+    const siteTitle = document.getElementById("site-title")
+    const header = document.getElementById("header")
+    const startAnimation = 0
+    const animationDelay = 0.2
+    const secondAnimation = startAnimation + (animationDelay * 2)
+    const thirdAnimation = startAnimation + (animationDelay * 3)
+    const fourthAnimation = startAnimation + (animationDelay * 4)
+
+
+    if (window.scrollY > 450) {
+        // scroll up
+        if (window.scrollY < currPos) {
+            // show header
+            setAnimationTransform(header, "", startAnimation)
+
+            // move back the text to the original place
+            setAnimationTransform(siteTitle, "", secondAnimation)
+            setAnimationTransform(nameInitialTwo, "", thirdAnimation)
+
+            // make the text visible
+            setAnimationOpacity(navLinks, "1", thirdAnimation)
+            for (let i = 0; i < nameHide.length; i++) {
+                setAnimationOpacity(nameHide[i], "1", thirdAnimation)
+            }
+        } else
+        // scroll down
+        {
+            // make text invisible
+            setAnimationOpacity(navLinks, "0", startAnimation)
+            for (let i = 0; i < nameHide.length; i++) {
+                setAnimationOpacity(nameHide[i], "0", startAnimation)
+            }
+
+            // move the text
+            setAnimationTransform(nameInitialTwo, "translateX(-37px)", startAnimation)
+            setAnimationTransform(siteTitle, "translateX(335px)", secondAnimation)
+
+            // hide header
+            setAnimationTransform(header, "translateY(-100px)", fourthAnimation)
+
+        }
+        currPos = window.scrollY
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// testimonials slide animation
 const testimonials = [
     {
         name: "Felix Mandela",
@@ -85,70 +162,6 @@ function updatePage() {
     getCurrentSlide()
     getCurrentTestimonial()
     getActiveDot()
-}
-
-window.addEventListener('scroll', scrollAnimation1)
-
-
-function scrollAnimation1() {
-    const nameInitial = document.getElementsByClassName("name-initial")
-    const nameHide = document.getElementsByClassName("name-hide")
-    // const navLinkItem = document.getElementsByClassName("nav-link-item")
-    if (window.scrollY <= 150) {
-        for (let i = 0; i < nameInitial.length; i++) {
-            nameInitial[i].style.transform = ""
-        }
-
-        document.getElementById("name-initial-move").style.transform = ""
-
-        for (let i = 0; i < nameHide.length; i++) {
-            nameHide[i].style.opacity = ""
-        }
-        // for (let i = 0; i < navLinkItem.length; i++) {
-        //     navLinkItem[i].style.opacity = ""
-        //     navLinkItem[i].style.transform = ""
-        // }
-        document.getElementById('nav-links').style.opacity = ""
-        document.getElementById('nav-links').style.pointerEvents = ""
-    }
-    if (window.scrollY > 150) {
-        for (let i = 0; i < nameInitial.length; i++) {
-            nameInitial[i].style.transform = ""
-        }
-
-        document.getElementById("name-initial-move").style.transform = "translateX(-37px)"
-
-        for (let i = 0; i < nameHide.length; i++) {
-            nameHide[i].style.opacity = "0"
-        }
-        // for (let i = 0; i < navLinkItem.length; i++) {
-        //     navLinkItem[i].style.opacity = "0"
-        //     navLinkItem[i].style.transform = "translateX(90px)"
-        // }
-        document.getElementById('nav-links').style.opacity = "0"
-        document.getElementById('nav-links').style.pointerEvents = "none"
-
-
-    }
-    if (window.scrollY > 300) {
-
-    }
-    if (window.scrollY > 450) {
-
-    }
-}
-
-function scrollAnimation2() {
-    if (window.scrollY <= 200) {
-        document.getElementById("nav-links").style.transform = ""
-    }
-    if (window.scrollY > 300) {
-        document.getElementById("nav-links").style.transform = "translateX(120px)"
-    }
-}
-
-function runScrollAnimation() {
-
 }
 
 window.onload = updatePage;
