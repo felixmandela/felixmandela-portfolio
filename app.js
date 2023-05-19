@@ -63,6 +63,8 @@ function scrollAnimation() {
                 scrollDownAnimation()
             }
         } else {
+            // reset position
+            setAnimation("transform", siteTitle, "", animationNumber(0))
             // scroll up
             if (window.scrollY < currPos) {
                 // show header
