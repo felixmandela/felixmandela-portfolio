@@ -151,6 +151,27 @@ nav span {
     border-radius: 10px;
 }
 
+.contact-button {
+    /* border: 1px solid #717171; */
+    border-radius: 10px;
+    padding: 5px 10px;
+    box-shadow: 0px 2px 4px #828282;
+    margin-top: 40px;
+    color: #111;
+    transition: background-color 0.1s linear;
+
+    /* margin-right: 70px; */
+    /* align-self: flex-end; */
+}
+
+
+.contact-button:hover {
+    background-color: #e4e4e4;
+}
+
+.contact-button:active {
+    background-color: #828282;
+}
 
 /* portfolio */
 
@@ -435,4 +456,42 @@ nav span {
 #arrow-before:disabled,
 #arrow-next:disabled {
     cursor: unset;
+}
+
+/* footer */
+footer {
+    border-top: 1px solid #e8e8e8;
+}
+
+footer>.container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+footer>.container>h2 {
+    align-self: flex-start;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.contact-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 50px;
+}
+
+.contact-wrapper li {
+    margin-bottom: 10px;
+}
+
+.contact-wrapper span {
+    margin-right: 10px;
+}
+
+footer>.container>p {
+    margin: 30px auto 20px;
 }
