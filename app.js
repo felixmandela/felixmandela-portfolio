@@ -2,23 +2,25 @@
 window.addEventListener('scroll', scrollAnimation)
 let currPos = window.scrollY
 
-
-function setAnimation(elementStyle, elementName, styleValue, animationDelay) {
-    elementName.style[elementStyle] = styleValue
-    elementName.style.transitionDelay = `${animationDelay}s`
-}
-
-
 function scrollAnimation() {
     const nameHide = document.getElementsByClassName("name-hide")
     const nameInitialTwo = document.getElementById("name-initial-2")
     const navLinks = document.getElementById("nav-links")
     const siteTitle = document.getElementById("site-title")
     const header = document.getElementById("header")
-
+    const containerWidth = document.getElementById("nav-container").clientWidth
+    let mediaQuery1 = 650;
+    const screenWidth = window.innerWidth
+    console.log(screenWidth / 2)
     const animationDelay = 0.25
+
     function animationNumber(n) {
         return 0 + (animationDelay * n)
+    }
+
+    function setAnimation(elementStyle, elementName, styleValue, animationDelay) {
+        elementName.style[elementStyle] = styleValue
+        elementName.style.transitionDelay = `${animationDelay}s`
     }
 
     function scrollUpAnimation() {
@@ -45,25 +47,59 @@ function scrollAnimation() {
 
         // move the text
         setAnimation("transform", nameInitialTwo, "translateX(-37px)", animationNumber(0))
-        setAnimation("transform", siteTitle, "translateX(335px)", animationNumber(1))
+        setAnimation("transform", siteTitle, `translateX(${(containerWidth / 2) - 15}px)`, animationNumber(1))
 
         // hide header
         setAnimation("transform", header, "translateY(-100px)", animationNumber(2))
     }
-    if (window.scrollY > 450) {
 
-        // scroll up
-        if (window.scrollY < currPos) {
-            scrollUpAnimation()
+    if (window.scrollY > 450) {
+        if (screenWidth >= mediaQuery1) {
+            // scroll up
+            if (window.scrollY < currPos) {
+                scrollUpAnimation()
+            } else {
+                // scroll down
+                scrollDownAnimation()
+            }
         } else {
-            // scroll down
-            scrollDownAnimation()
+            // scroll up
+            if (window.scrollY < currPos) {
+                // show header
+                setAnimation("transform", header, "", animationNumber(0))
+            } else {
+                // scroll down
+                // hide header
+                setAnimation("transform", header, "translateY(-100px)", animationNumber(0))
+            }
         }
         currPos = window.scrollY
     }
 }
 
 
+// burger animation
+const burger = document.getElementById("burger")
+const navLinks = document.getElementById("nav-links")
+const navLinksWrapper = document.getElementById("nav-links-wrapper")
+function hideNavLinks() {
+    navLinks.style.display = "none"
+}
+function showNavLinks() {
+    navLinks.style.display = "flex"
+}
+burger.addEventListener("click", () => {
+    if (navLinks.style.display === "flex") {
+        hideNavLinks();
+    } else { showNavLinks() }
+})
+// click outside the burger area will close it
+window.addEventListener("click", e => {
+    const isClickInside = navLinksWrapper.contains(e.target)
+    if (!isClickInside) {
+        hideNavLinks();
+    }
+})
 
 
 
