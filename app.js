@@ -52,7 +52,6 @@ function scrollAnimation() {
         // hide header
         setAnimation("transform", header, "translateY(-100px)", animationNumber(2))
     }
-
     if (window.scrollY > 450) {
         if (screenWidth >= mediaQuery1) {
             // scroll up
@@ -84,6 +83,7 @@ function scrollAnimation() {
 const burger = document.getElementById("burger")
 const navLinks = document.getElementById("nav-links")
 const navLinksWrapper = document.getElementById("nav-links-wrapper")
+
 function hideNavLinks() {
     navLinks.style.display = "none"
 }
@@ -95,6 +95,7 @@ burger.addEventListener("click", () => {
         hideNavLinks();
     } else { showNavLinks() }
 })
+
 // click outside the burger area will close it
 window.addEventListener("click", e => {
     const isClickInside = navLinksWrapper.contains(e.target)
@@ -102,6 +103,15 @@ window.addEventListener("click", e => {
         hideNavLinks();
     }
 })
+
+// responsive, resize screen will reset the navlinks visibility
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 650) {
+        showNavLinks();
+    } else hideNavLinks();
+})
+
+
 
 
 
