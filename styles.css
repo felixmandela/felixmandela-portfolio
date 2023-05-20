@@ -20,7 +20,12 @@ html {
 }
 
 .side-margin {
-    margin: 0 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.top-margin {
+    margin-top: 100px;
 }
 
 .offscreen {
@@ -28,9 +33,6 @@ html {
     left: -10000px;
 }
 
-section {
-    margin: 90px 40px;
-}
 
 h2 {
     font-size: 2rem;
@@ -489,6 +491,8 @@ footer .container>h2 {
     flex-direction: row;
     justify-content: space-between;
     column-gap: 50px;
+    row-gap: 15px;
+    flex-wrap: wrap;
 }
 
 .contact-wrapper li {
@@ -499,8 +503,9 @@ footer .container>h2 {
     margin-right: 10px;
 }
 
-footer>.container>p {
-    margin: 30px auto 20px;
+#copyright {
+    margin: 40px auto 20px;
+    font-size: 14px;
 }
 
 @media screen and (max-width: 800px) {
