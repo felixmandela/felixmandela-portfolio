@@ -11,7 +11,6 @@ function scrollAnimation() {
     const containerWidth = document.getElementById("nav-container").clientWidth
     let mediaQuery1 = 650;
     const screenWidth = window.innerWidth
-    console.log(screenWidth / 2)
     const animationDelay = 0.25
 
     function animationNumber(n) {
