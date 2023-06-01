@@ -158,7 +158,7 @@ let testimonialsDots = document.getElementById("testimonials-dots")
 let totalDots = "";
 
 
-// add numbe of dots according to the number of testimonial
+// add number of dots according to the number of testimonial
 for (let i = 0; i < testimonials.length; i++) {
     totalDots += `<span class="dot"></span>`
 }
