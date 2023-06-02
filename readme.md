@@ -25,7 +25,7 @@ With 5 years of experience as a Product Manager, I'm new to the world of front e
 
 ✨ Embark on my journey to learn and explore the front end world as we delve into my past projects that have brought about game-changing experiences:
 
-1. [🍅 Pomify](https://felixmandela.vercel.app/): My first foray into REST APIs! Pomify is a pomodoro timer application with Spotify integration. I leveraged Spotify's API, including the authorization flow, to allow users to enhance their productivity with customized work and break sessions accompanied by their favorite music tracks. This project involved implementing the authorization flow, setting up a backend server using Node.js and Express, and utilizing SCSS and JavaScript to build a sleek user interface.
+1. [🍅 Pomify](https://pomify.vercel.app/): My first foray into REST APIs! Pomify is a pomodoro timer application with Spotify integration. I leveraged Spotify's API, including the authorization flow, to allow users to enhance their productivity with customized work and break sessions accompanied by their favorite music tracks. This project involved implementing the authorization flow, setting up a backend server using Node.js and Express, and utilizing SCSS and JavaScript to build a sleek user interface.
 
 2. [⌚ Rolex Showcase](https://rolex-showcase.vercel.app/): This project marked my first experience with SCSS, as I designed a simple landing page to showcase Rolex watches. To add an extra touch of interactivity, I used JavaScript to create an infinite loop effect for the list of watches, enhancing the visual appeal and user experience.
 
