@@ -4,6 +4,11 @@
   box-sizing: border-box;
   font: 300 16px/1.5 "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+@media screen and (max-width: 425px) {
+  * {
+    font-size: 14px;
+  }
+}
 
 /* global */
 body,
@@ -168,34 +173,82 @@ a {
   align-items: start;
   height: auto;
 }
+@media screen and (max-width: 425px) {
+  .home-section .container {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
 .home-section span {
   vertical-align: middle;
+}
+@media screen and (max-width: 720px) {
+  .home-section p {
+    font-size: 0.9rem;
+  }
 }
 .home-section h2 {
   font-size: 3rem;
   font-weight: 300;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  line-height: 100%;
+}
+@media screen and (max-width: 720px) {
+  .home-section h2 {
+    font-size: 2.5rem;
+  }
 }
 .home-section .tech-stacks {
   display: flex;
   flex-direction: row;
   margin-top: 40px;
 }
+@media screen and (max-width: 425px) {
+  .home-section .tech-stacks {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .home-section .tech-stacks ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-left: 20px;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  row-gap: 5px;
+}
+@media screen and (max-width: 425px) {
+  .home-section .tech-stacks ul {
+    margin-left: 0px;
+    justify-content: center;
+  }
 }
 .home-section .tech-stacks ul li {
   font-size: 14px;
   padding: 0 10px;
-  margin-left: 10px;
   border: 2px solid #e8e8e8;
   border-radius: 10px;
 }
+@media screen and (max-width: 720px) {
+  .home-section .tech-stacks ul li {
+    font-size: 0.9rem;
+  }
+}
 .home-section .tech-stacks span {
   min-width: 80px;
+}
+@media screen and (max-width: 720px) {
+  .home-section .tech-stacks span {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .home-section .tech-stacks span {
+    margin-bottom: 10px;
+  }
 }
 .home-section .contact-button {
   border-radius: 10px;
@@ -225,7 +278,7 @@ a {
   margin: 0;
   display: grid;
   grid-template-rows: repeat(3, minmax(0, 1fr));
-  gap: min(2vw, 16px);
+  gap: 24px;
   grid-auto-flow: row;
   grid-template-areas: "portfolio-1 portfolio-1 portfolio-1" "portfolio-2 portfolio-2 portfolio-2" "portfolio-3 portfolio-3 portfolio-3";
 }
@@ -236,10 +289,17 @@ a {
   justify-content: space-around;
   border-radius: 4px;
   border: 1px solid #e8e8e8;
-  padding: 10px;
+  padding: 20px;
   -moz-column-gap: 10px;
        column-gap: 10px;
   height: 300px;
+}
+@media screen and (max-width: 620px) {
+  .portfolios-section .portfolio {
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+  }
 }
 .portfolios-section .portfolio-1 {
   grid-area: portfolio-1;
@@ -257,6 +317,12 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 620px) {
+  .portfolios-section .portfolio-preview {
+    width: 100%;
+    height: 350px;
+  }
 }
 .portfolios-section .portfolio-preview img {
   -o-object-fit: cover;
@@ -277,11 +343,26 @@ a {
   align-items: center;
   align-content: center;
 }
+@media screen and (max-width: 620px) {
+  .portfolios-section .portfolio-description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    margin-top: 20px;
+  }
+}
 .portfolios-section .portfolio-title {
   font-size: 1.3rem;
+  text-align: center;
 }
 .portfolios-section .portfolio-intro {
   text-align: center;
+}
+@media screen and (max-width: 720px) {
+  .portfolios-section .portfolio-intro {
+    font-size: 0.9rem;
+  }
 }
 .portfolios-section .portfolio-techstack {
   display: flex;
@@ -299,6 +380,17 @@ a {
   border: 2px solid #e8e8e8;
   border-radius: 10px;
 }
+@media screen and (max-width: 720px) {
+  .portfolios-section .portfolio-techstack li {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .portfolios-section .portfolio-source {
+    font-size: 0.9rem;
+  }
+}
+
 /* timeline */
 .timeline-section .container {
   display: flex;
@@ -478,6 +570,11 @@ a {
   align-self: flex-start;
   border-radius: 50%;
 }
+@media screen and (max-width: 425px) {
+  .timeline-section .timeline-logo {
+    max-width: 40px;
+  }
+}
 .timeline-section .timeline-date {
   font-size: 12px;
 }
@@ -522,8 +619,8 @@ a {
   border: 1px solid #e8e8e8;
   border-radius: 4px;
   padding: 20px;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 .testimonial-section .testimonial-quote {
   width: 32px;
