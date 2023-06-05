@@ -114,38 +114,25 @@ window.addEventListener("resize", () => {
 
 
 
-
-
-
-
-
-
-
 // testimonials slide animation
 const testimonials = [
     {
-        name: "Felix Mandela",
-        role: "Product Owner, Employment Hero",
-        message: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-        image: "#"
+        name: "Duy Duhwee Pham",
+        role: "Product Owner, Bootloader",
+        message: "I admire him for always staying cool, considering everything we went through together at HReasily. You can always count on him to keep it real — he doesn't sugarcoat anything — something I think is vital in the product line of work. Felix always reliably delivers what was agreed upon, and I think you will find the same thing if you have the chance to work with him.",
+        image: "Assets/Image/Duhwee.png"
     },
     {
-        name: "Felix Mandela 2",
-        role: "Product Owner, Employment Hero",
-        message: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-        image: "#"
+        name: "Cheryl Chen",
+        role: "Product Owner, HReasily",
+        message: "I had the opportunity to work with Felix in HREasily & he definitely delivers impressive work! Felix was able to currently manage multiple key product modules very well - which benefits all users that uses the product! Felix works very well as an individual contributor to the team as well as working in a team setting! I have sat in multiple meetings that Felix has with his development team and he is able to articulate the business needs and translate it accordingly for the dev team to work on. I see Felix as a valued team player and will definitely work well and easily in any team :-)",
+        image: "Assets/Image/Cheryl.jpg"
     },
     {
-        name: "Felix Mandela 3",
-        role: "Product Owner, Employment Hero",
-        message: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-        image: "#"
-    },
-    {
-        name: "Felix Mandela 4",
-        role: "Product Owner, Employment Hero",
-        message: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum loremlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-        image: "#"
+        name: "Kent Kent",
+        role: "Fullstack Engineer, Orangekloud",
+        message: "Felix has a remarkable ability to understand the needs of our customers and translate them into clear and actionable product requirements. He possesses a keen eye for detail and is adept at creating well-defined user stories, prioritizing features, and managing the product backlog. His deep understanding of agile methodologies and product development processes enables him to effectively lead cross-functional teams and deliver high-quality products on time.",
+        image: "Assets/Image/Kent.jpg"
     }
 ]
 

@@ -284,15 +284,17 @@ a {
     .portfolio {
         overflow: hidden;
         @include flexbox(row);
-        justify-content: center;
+        justify-content: space-around;
         border-radius: 4px;
         border: 1px solid $border-color;
-        padding: 0 8px;
+        padding: 10px;
+        column-gap: 10px;
+        height: 300px;
+
     }
 
     .portfolio-1 {
         grid-area: portfolio-1;
-        height: 200px;
     }
 
     .portfolio-2 {
@@ -302,6 +304,62 @@ a {
     .portfolio-3 {
         grid-area: portfolio-3;
     }
+
+    .portfolio-preview {
+        width: 55%;
+        overflow: hidden;
+        @include flexbox(row);
+        justify-content: center;
+        align-items: center;
+
+        img {
+            object-fit: cover;
+            border-radius: 5px;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+
+    }
+
+    .portfolio-description {
+        width: 40%;
+        @include flexbox(column);
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+
+    }
+
+    .portfolio-title {
+        font-size: 1.3rem;
+    }
+
+    .portfolio-intro {
+        text-align: center;
+    }
+
+    .portfolio-techstack {
+        @include flexbox(row);
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        row-gap: 5px;
+        column-gap: 5px;
+
+        li {
+            font-size: 14px;
+            padding: 0 10px;
+            border: 2px solid $border-color;
+            border-radius: 10px;
+        }
+    }
+
+    .portfolio-source {}
 }
 
 
