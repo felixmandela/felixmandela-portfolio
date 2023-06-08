@@ -118,7 +118,7 @@ window.addEventListener("resize", () => {
 const testimonials = [
     {
         name: "Duy Duhwee Pham",
-        role: "Product Owner, Bootloader",
+        role: "Product Manager, Bootloader",
         message: "I admire him for always staying cool, considering everything we went through together at HReasily. You can always count on him to keep it real — he doesn't sugarcoat anything — something I think is vital in the product line of work. Felix always reliably delivers what was agreed upon, and I think you will find the same thing if you have the chance to work with him.",
         image: "Assets/Image/Duhwee.png"
     },
