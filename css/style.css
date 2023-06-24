@@ -134,6 +134,10 @@ a {
     margin-top: 15px;
   }
 }
+#header nav #nav-links li .nav-link-item {
+  display: inline-block;
+  width: 100%;
+}
 @media screen and (max-width: 650px) {
   #header nav #burger {
     width: 40px;
