@@ -5,6 +5,17 @@ $background-color: #fdfdfd;
 $border-color: #e8e8e8;
 $secondary-color-1: #e4e4e4;
 $secondary-color-2: #828282;
+$remote-bg: #c7e995;
+$remote-text: #111;
+$anchor-color: #387ea8;
+
+// $text-color: #eeeeee;
+// $background-color: #121212;
+// $border-color: #ffffff;
+// $secondary-color-1: #1b1b1b;
+// $secondary-color-2: #7d7d7d;
+// $remote-bg: rgb(206, 235, 162);
+// $remote-text: #111;
 
 @mixin flexbox($direction) {
   display: flex;
@@ -67,6 +78,7 @@ li {
 
 a {
   text-decoration: none;
+  color: $anchor-color;
 }
 
 .container {
@@ -646,7 +658,8 @@ a {
 
   .remote {
     font-size: 11px;
-    background-color: rgb(247, 255, 235);
+    background-color: $remote-bg;
+    color: $remote-text;
     border: 1px solid $border-color;
     border-radius: 10px;
     margin-left: 10px;
@@ -679,11 +692,8 @@ a {
   }
 
   .testimonial-quote {
-    width: 32px;
-    height: 32px;
-    margin: 0 auto 16px;
-    background: url("https://ndrewtl.github.io/airspace-jekyll/img/cotation.png")
-      no-repeat center;
+    margin: 12px auto 12px;
+    color: $text-color;
   }
 
   .testimonials-box-wrapper {
@@ -737,14 +747,14 @@ a {
     row-gap: 5px;
     height: 6px;
     width: 6px;
-    background-color: #bbb;
+    background-color: $secondary-color-2;
     border-radius: 50%;
     transition: background-color 0.6s ease;
   }
 
   .active,
   .dot:hover {
-    background-color: #717171;
+    background-color: $text-color;
   }
 
   #arrow-before,
@@ -752,6 +762,7 @@ a {
     height: 30px;
     border: none;
     background-color: $background-color;
+    color: $border-color;
     cursor: pointer;
   }
 

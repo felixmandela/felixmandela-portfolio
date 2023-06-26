@@ -1,246 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Felix Mandela - Portfolio Website</title>
-    <meta name="author" content="Felix Mandela">
-    <meta name="description" content="Felix Mandela's personal portfolio website showcasing his work and skills.">
-    <meta name="keywords" content="Felix Mandela, portfolio, website, personal, work, skills">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/cac5f5b001.js" crossorigin="anonymous"></script>
+    <meta name="author" content="Felix Mandela" />
+    <meta
+      name="description"
+      content="Felix Mandela's personal portfolio website showcasing his work and skills."
+    />
+    <meta
+      name="keywords"
+      content="Felix Mandela, portfolio, website, personal, work, skills"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/cac5f5b001.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header id="header">
-        <nav class="side-margin">
-            <div id="nav-container" class="container">
-                <a id="site-title" href="#">
-                    <span id="name-initial-1">F</span><span class="name-hide">elix</span>
-                    <span id="name-initial-2" class="name-initial">M</span><span class="name-hide">andela</span>
-                </a>
-                <div id="nav-links-wrapper">
-                    <div id="burger">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <ul id="nav-links">
-                        <li><a class="nav-link-item" href="#portfolios">Portfolios</a></li>
-                        <li><a class="nav-link-item" href="#timeline">Timeline</a></li>
-                        <li><a class="nav-link-item" href="#testimonial">Testimonials</a></li>
-                        <li><a class="nav-link-item" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
+      <nav class="side-margin">
+        <div id="nav-container" class="container">
+          <a id="site-title" href="#">
+            <span id="name-initial-1">F</span
+            ><span class="name-hide">elix</span>
+            <span id="name-initial-2" class="name-initial">M</span
+            ><span class="name-hide">andela</span>
+          </a>
+          <div id="nav-links-wrapper">
+            <div id="burger">
+              <div></div>
+              <div></div>
+              <div></div>
             </div>
-        </nav>
+            <ul id="nav-links">
+              <li>
+                <a class="nav-link-item" href="#portfolios">Portfolios</a>
+              </li>
+              <li><a class="nav-link-item" href="#timeline">Timeline</a></li>
+              <li>
+                <a class="nav-link-item" href="#testimonial">Testimonials</a>
+              </li>
+              <li><a class="nav-link-item" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section id="home" class="home-section side-margin top-margin">
-            <div class="container">
-                <h1 class="offscreen">Personal Portfolio Website of Felix Mandela</h1>
-                <p>Hi there
-                    <span><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"
-                            alt="giphy.gif"></span>
-                    I'm a Product Manager turned
+      <section id="home" class="home-section side-margin top-margin">
+        <div class="container">
+          <h1 class="offscreen">Personal Portfolio Website of Felix Mandela</h1>
+          <p>
+            Hi there
+            <span
+              ><img
+                src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif"
+                width="25px"
+                alt="giphy.gif"
+            /></span>
+            I'm a Product Manager turned
+          </p>
+          <h2>Frontend Developer</h2>
+          <p>
+            My journey began as a Product Manager, where I gained five enriching
+            years of experience managing remote teams and working
+            asynchronously. This path instilled a deep understanding of user
+            needs and efficient project execution, assets that I now infuse into
+            my coding. Now, I intend to leverage my blend of experiences to
+            create engaging, user-centric digital solutions.
+          </p>
+          <div class="tech-stacks">
+            <span>Tech stacks:</span>
+            <ul>
+              <li>HTML</li>
+              <li>CSS/SCSS</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>Figma</li>
+            </ul>
+          </div>
+          <a href="#contact" class="contact-button">Contact Me!</a>
+        </div>
+      </section>
+
+      <section
+        id="portfolios"
+        class="portfolios-section side-margin top-margin"
+      >
+        <div class="container">
+          <h2 class="section-header">Portfolios</h2>
+          <div class="portfolios-wrapper">
+            <div class="portfolio portfolio-1">
+              <a
+                class="portfolio-preview"
+                href="https://pomify.vercel.app/"
+                target="_blank"
+                ><img src="Assets/Portfolio/pomify-preview.png" alt=""
+              /></a>
+              <div class="portfolio-description">
+                <h3 class="portfolio-title">Pomify</h3>
+                <p class="portfolio-intro">
+                  A Pomodoro timer application with Spotify integration, built
+                  using React, Node.js, Express, and Spotify's API.
                 </p>
-                <h2>Frontend Developer</h2>
-                <p> My journey began as a Product Manager,
-                    where I gained five enriching years of experience managing remote teams and working asynchronously.
-                    This path instilled a deep understanding of user needs and efficient project execution, assets that
-                    I now infuse into my coding. Now, I intend to leverage my blend of experiences to create engaging,
-                    user-centric digital solutions.</p>
-                <div class="tech-stacks">
-                    <span>Tech stacks:</span>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS/SCSS</li>
-                        <li>JavaScript</li>
-                        <li>React</li>
-                        <li>Node.js</li>
-                        <li>Express</li>
-                        <li>Figma</li>
-                    </ul>
-                </div>
-                <a href="#contact" class="contact-button">Contact Me!</a>
-            </div>
-        </section>
-
-        <section id="portfolios" class="portfolios-section side-margin top-margin">
-            <div class="container">
-                <h2 class="section-header">Portfolios</h2>
-                <div class="portfolios-wrapper">
-                    <div class="portfolio portfolio-1">
-                        <a class="portfolio-preview" href="https://pomify.vercel.app/" target="_blank"><img
-                                src="Assets/Portfolio/pomify-preview.png" alt=""></a>
-                        <div class="portfolio-description">
-
-                            <h3 class="portfolio-title">Pomify</h3>
-                            <p class="portfolio-intro">A Pomodoro timer application with Spotify integration, built
-                                using React, Node.js,
-                                Express, and Spotify's API.</p>
-                            <ul class="portfolio-techstack">
-                                <li>HTML</li>
-                                <li>CSS/SCSS</li>
-                                <li>JavaScript</li>
-                                <li>Node.js</li>
-                                <li>Express</li>
-                            </ul>
-                            <a class="portfolio-source" href="https://github.com/felixmandela/pomify"
-                                target="_blank">Code <span class="fa-brands fa-github"
-                                    style="color: #000000;"></span></a>
-                        </div>
-                    </div>
-                    <div class="portfolio portfolio-2">
-                        <a class="portfolio-preview" href="https://rolex-showcase.vercel.app/" target="_blank"><img
-                                src="Assets/Portfolio/rolex-showcase-preview.png" alt=""></a>
-                        <div class="portfolio-description">
-
-                            <h3 class="portfolio-title">Rolex Watches Showcase</h3>
-                            <p class="portfolio-intro">An elegant landing page for Rolex watches, demonstrating
-                                attention to detail and aesthetic design.</p>
-                            <ul class="portfolio-techstack">
-                                <li>HTML</li>
-                                <li>CSS/SCSS</li>
-                                <li>JavaScript</li>
-                            </ul>
-                            <a class="portfolio-source" href="https://github.com/felixmandela/rolex-showcase"
-                                target="_blank">Code <span class="fa-brands fa-github"
-                                    style="color: #000000;"></span></a>
-                        </div>
-                    </div>
-                    <div class="portfolio portfolio-3">
-                        <a class="portfolio-preview" href="https://oldskool-snake.vercel.app/" target="_blank"><img
-                                src="Assets/Portfolio/snake-preview.png" alt=""></a>
-                        <div class="portfolio-description">
-
-                            <h3 class="portfolio-title">Retro Snake</h3>
-                            <p class="portfolio-intro">A modern take on the classic snake game, highlighting skills in
-                                JavaScript and creative problem-solving.</p>
-                            <ul class="portfolio-techstack">
-                                <li>HTML</li>
-                                <li>CSS/SCSS</li>
-                                <li>JavaScript</li>
-                            </ul>
-                            <a class="portfolio-source" href="https://github.com/felixmandela/oldskool-snake"
-                                target="_blank">Code <span class="fa-brands fa-github"
-                                    style="color: #000000;"></span></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="timeline" class="timeline-section side-margin top-margin">
-            <div class="container">
-                <h2 class="section-header">Developer Story</h2>
-                <ul class="timelines-wrapper">
-                    <li class="timeline-container">
-                        <img class="timeline-logo"
-                            src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2VjNjFkMzk5NjVlMGUwNDJmNzEwMmUxZGE2ZGY4NmY0NzgzNGQxZiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PXM/l4FGF73Y8SGpmiOVW/giphy.gif"
-                            alt="">
-                        <div class="timeline-text">
-                            <i class="fa-solid fa-briefcase fa-xs work-icon"></i>
-                            <p class="timeline-date">Jan 2023 - Now</p>
-                            <p class="timeline-detail">My <span class="wave">developer journey</span> starts here.</p>
-                        </div>
-                        <div class="timeline-arrow"></div>
-                    </li>
-                    <li class="timeline-container">
-                        <div class="timeline-arrow"></div>
-                        <img class="timeline-logo" src="Assets/Logo/EH-logo.jpg" alt="Employment Hero Logo">
-                        <div class="timeline-text">
-                            <i class=" fa-solid fa-briefcase fa-xs work-icon"></i>
-                            <p class="timeline-date">Jan 2022 - Current</p>
-                            <p class="timeline-role">Product Owner<span class="remote">remote</span></p>
-                            <a href="https://employmenthero.com/" class="timeline-location" target="_blank">Employment
-                                Hero</a>
-                            <p class="timeline-detail"><span class="wave">Employment Hero</span> is Australia's top
-                                cloud-based HR, payroll and
-                                benefits platform for employers & employees.</p>
-                        </div>
-                    </li>
-                    <li class="timeline-container">
-                        <img class="timeline-logo" src="Assets/Logo/HRe-logo.jpg" alt="HR Easily Logo">
-                        <div class="timeline-text">
-                            <i class="fa-solid fa-briefcase fa-xs work-icon"></i>
-                            <p class="timeline-date">Nov 2019 - Dec 2021</p>
-                            <p class="timeline-role">Product Owner<span class="remote">remote</span></p>
-                            <a href="https://hreasily.com/" class="timeline-location" target="_blank">HReasily</a>
-                            <p class="timeline-detail"><span class="wave">HReasily</span> is a Singaporean-based company
-                                that
-                                provides Software as a
-                                Service (SaaS)
-                                that enables companies to improve productivity by streamlining HR work processes.</p>
-                        </div>
-                        <div class="timeline-arrow"></div>
-                    </li>
-                    <li class="timeline-container">
-                        <div class="timeline-arrow"></div>
-                        <img class="timeline-logo" src="Assets/Logo/Limu-logo.jpg" alt="Limu Logo">
-                        <div class="timeline-text">
-                            <i class=" fa-solid fa-briefcase fa-xs work-icon"></i>
-                            <p class="timeline-date">Nov 2018 - Nov 2919</p>
-                            <p class="timeline-role">Co-Founder / Product Manager</p>
-                            <p class="timeline-location">LIMU</p>
-                            <p class="timeline-detail"><span class="wave">LIMU</span> is an Indonesian live-streaming
-                                service dedicated to musicians and fans.</p>
-                        </div>
-                    </li>
+                <ul class="portfolio-techstack">
+                  <li>HTML</li>
+                  <li>CSS/SCSS</li>
+                  <li>JavaScript</li>
+                  <li>Node.js</li>
+                  <li>Express</li>
                 </ul>
+                <a
+                  class="portfolio-source"
+                  href="https://github.com/felixmandela/pomify"
+                  target="_blank"
+                  >Code
+                  <span
+                    class="fa-brands fa-github"
+                    style="color: #000000"
+                  ></span
+                ></a>
+              </div>
             </div>
-        </section>
-
-        <section id="testimonial" class="testimonial-section side-margin top-margin">
-            <div class="container">
-                <h2 class="section-header">Testimonials</h2>
-                <div class="testimonials-wrapper">
-                    <button id="arrow-before" class="fas fa-angle-left fa-xl">
-                    </button>
-                    <div class="testimonials-box-wrapper">
-                        <div id="testimonials-box"></div>
-                        <div id="testimonials-dots"></div>
-                    </div>
-                    <button id="arrow-next" class="fas fa-angle-right fa-xl">
-                    </button>
-
-                </div>
+            <div class="portfolio portfolio-2">
+              <a
+                class="portfolio-preview"
+                href="https://rolex-showcase.vercel.app/"
+                target="_blank"
+                ><img src="Assets/Portfolio/rolex-showcase-preview.png" alt=""
+              /></a>
+              <div class="portfolio-description">
+                <h3 class="portfolio-title">Rolex Watches Showcase</h3>
+                <p class="portfolio-intro">
+                  An elegant landing page for Rolex watches, demonstrating
+                  attention to detail and aesthetic design.
+                </p>
+                <ul class="portfolio-techstack">
+                  <li>HTML</li>
+                  <li>CSS/SCSS</li>
+                  <li>JavaScript</li>
+                </ul>
+                <a
+                  class="portfolio-source"
+                  href="https://github.com/felixmandela/rolex-showcase"
+                  target="_blank"
+                  >Code
+                  <span
+                    class="fa-brands fa-github"
+                    style="color: #000000"
+                  ></span
+                ></a>
+              </div>
             </div>
-        </section>
+            <div class="portfolio portfolio-3">
+              <a
+                class="portfolio-preview"
+                href="https://oldskool-snake.vercel.app/"
+                target="_blank"
+                ><img src="Assets/Portfolio/snake-preview.png" alt=""
+              /></a>
+              <div class="portfolio-description">
+                <h3 class="portfolio-title">Retro Snake</h3>
+                <p class="portfolio-intro">
+                  A modern take on the classic snake game, highlighting skills
+                  in JavaScript and creative problem-solving.
+                </p>
+                <ul class="portfolio-techstack">
+                  <li>HTML</li>
+                  <li>CSS/SCSS</li>
+                  <li>JavaScript</li>
+                </ul>
+                <a
+                  class="portfolio-source"
+                  href="https://github.com/felixmandela/oldskool-snake"
+                  target="_blank"
+                  >Code
+                  <span
+                    class="fa-brands fa-github"
+                    style="color: #000000"
+                  ></span
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="timeline" class="timeline-section side-margin top-margin">
+        <div class="container">
+          <h2 class="section-header">Developer Story</h2>
+          <ul class="timelines-wrapper">
+            <li class="timeline-container">
+              <img
+                class="timeline-logo"
+                src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2VjNjFkMzk5NjVlMGUwNDJmNzEwMmUxZGE2ZGY4NmY0NzgzNGQxZiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PXM/l4FGF73Y8SGpmiOVW/giphy.gif"
+                alt=""
+              />
+              <div class="timeline-text">
+                <i class="fa-solid fa-briefcase fa-xs work-icon"></i>
+                <p class="timeline-date">Jan 2023 - Now</p>
+                <p class="timeline-detail">
+                  My <span class="wave">developer journey</span> starts here.
+                </p>
+              </div>
+              <div class="timeline-arrow"></div>
+            </li>
+            <li class="timeline-container">
+              <div class="timeline-arrow"></div>
+              <img
+                class="timeline-logo"
+                src="Assets/Logo/EH-logo.jpg"
+                alt="Employment Hero Logo"
+              />
+              <div class="timeline-text">
+                <i class="fa-solid fa-briefcase fa-xs work-icon"></i>
+                <p class="timeline-date">Jan 2022 - Current</p>
+                <p class="timeline-role">
+                  Product Owner<span class="remote">remote</span>
+                </p>
+                <a
+                  href="https://employmenthero.com/"
+                  class="timeline-location"
+                  target="_blank"
+                  >Employment Hero</a
+                >
+                <p class="timeline-detail">
+                  <span class="wave">Employment Hero</span> is Australia's top
+                  cloud-based HR, payroll and benefits platform for employers &
+                  employees.
+                </p>
+              </div>
+            </li>
+            <li class="timeline-container">
+              <img
+                class="timeline-logo"
+                src="Assets/Logo/HRe-logo.jpg"
+                alt="HR Easily Logo"
+              />
+              <div class="timeline-text">
+                <i class="fa-solid fa-briefcase fa-xs work-icon"></i>
+                <p class="timeline-date">Nov 2019 - Dec 2021</p>
+                <p class="timeline-role">
+                  Product Owner<span class="remote">remote</span>
+                </p>
+                <a
+                  href="https://hreasily.com/"
+                  class="timeline-location"
+                  target="_blank"
+                  >HReasily</a
+                >
+                <p class="timeline-detail">
+                  <span class="wave">HReasily</span> is a Singaporean-based
+                  company that provides Software as a Service (SaaS) that
+                  enables companies to improve productivity by streamlining HR
+                  work processes.
+                </p>
+              </div>
+              <div class="timeline-arrow"></div>
+            </li>
+            <li class="timeline-container">
+              <div class="timeline-arrow"></div>
+              <img
+                class="timeline-logo"
+                src="Assets/Logo/Limu-logo.jpg"
+                alt="Limu Logo"
+              />
+              <div class="timeline-text">
+                <i class="fa-solid fa-briefcase fa-xs work-icon"></i>
+                <p class="timeline-date">Nov 2018 - Nov 2919</p>
+                <p class="timeline-role">Co-Founder / Product Manager</p>
+                <p class="timeline-location">LIMU</p>
+                <p class="timeline-detail">
+                  <span class="wave">LIMU</span> is an Indonesian live-streaming
+                  service dedicated to musicians and fans.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="testimonial"
+        class="testimonial-section side-margin top-margin"
+      >
+        <div class="container">
+          <h2 class="section-header">Testimonials</h2>
+          <div class="testimonials-wrapper">
+            <button id="arrow-before" class="fas fa-angle-left fa-xl"></button>
+            <div class="testimonials-box-wrapper">
+              <div id="testimonials-box"></div>
+              <div id="testimonials-dots"></div>
+            </div>
+            <button id="arrow-next" class="fas fa-angle-right fa-xl"></button>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="top-margin">
-        <div class="side-margin">
-            <div id="contact" class="container">
-                <h2>Contact me</h2>
-                <div class="contact-wrapper">
-                    <div id="social-links-wrapper">
-                        <ul>
-                            <li class="social-links" id="linkedin-link"><span class="fa-brands fa-linkedin"></span><a
-                                    href="https://www.linkedin.com/in/felixmandela/" target="_blank">Felix Mandela</a>
-                            </li>
-                            <li class="social-links" id="github-link"><span class="fa-brands fa-github"></span><a
-                                    href="https://github.com/felixmandela/" target="_blank">felixmandela</a></li>
-                            <li class="social-links" id="twitter-link"><span class="fa-brands fa-twitter"></span><a
-                                    href="https://twitter.com/flxmandela" target="_blank">flxmandela</a></li>
-                        </ul>
-                    </div>
-                    <div id="contact-email">
-                        <p>Felix Mandela</p>
-                        <a href="mailto:felixmandela95@gmail.com" target="_blank">felixmandela95@gmail.com</a>
-                    </div>
-                    <div id="contact-location">
-                        Jakarta, Indonesia 📍
-                    </div>
-                </div>
-                <p id="copyright">&copy; 2023 Felix Mandela. All rights reserved.</p>
+      <div class="side-margin">
+        <div id="contact" class="container">
+          <h2>Contact me</h2>
+          <div class="contact-wrapper">
+            <div id="social-links-wrapper">
+              <ul>
+                <li class="social-links" id="linkedin-link">
+                  <span class="fa-brands fa-linkedin"></span
+                  ><a
+                    href="https://www.linkedin.com/in/felixmandela/"
+                    target="_blank"
+                    >Felix Mandela</a
+                  >
+                </li>
+                <li class="social-links" id="github-link">
+                  <span class="fa-brands fa-github"></span
+                  ><a href="https://github.com/felixmandela/" target="_blank"
+                    >felixmandela</a
+                  >
+                </li>
+                <li class="social-links" id="twitter-link">
+                  <span class="fa-brands fa-twitter"></span
+                  ><a href="https://twitter.com/flxmandela" target="_blank"
+                    >flxmandela</a
+                  >
+                </li>
+              </ul>
             </div>
+            <div id="contact-email">
+              <p>Felix Mandela</p>
+              <a href="mailto:felixmandela95@gmail.com" target="_blank"
+                >felixmandela95@gmail.com</a
+              >
+            </div>
+            <div id="contact-location">Jakarta, Indonesia 📍</div>
+          </div>
+          <p id="copyright">&copy; 2023 Felix Mandela. All rights reserved.</p>
         </div>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

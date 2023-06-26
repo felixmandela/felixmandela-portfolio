@@ -46,6 +46,7 @@ li {
 
 a {
   text-decoration: none;
+  color: #387ea8;
 }
 
 .container {
@@ -596,7 +597,8 @@ a {
 }
 .timeline-section .remote {
   font-size: 11px;
-  background-color: rgb(247, 255, 235);
+  background-color: #c7e995;
+  color: #111;
   border: 1px solid #e8e8e8;
   border-radius: 10px;
   margin-left: 10px;
@@ -627,10 +629,8 @@ a {
        column-gap: 20px;
 }
 .testimonial-section .testimonial-quote {
-  width: 32px;
-  height: 32px;
-  margin: 0 auto 16px;
-  background: url("https://ndrewtl.github.io/airspace-jekyll/img/cotation.png") no-repeat center;
+  margin: 12px auto 12px;
+  color: #111;
 }
 .testimonial-section .testimonials-box-wrapper {
   min-height: 450px;
@@ -680,19 +680,20 @@ a {
   row-gap: 5px;
   height: 6px;
   width: 6px;
-  background-color: #bbb;
+  background-color: #828282;
   border-radius: 50%;
   transition: background-color 0.6s ease;
 }
 .testimonial-section .active,
 .testimonial-section .dot:hover {
-  background-color: #717171;
+  background-color: #111;
 }
 .testimonial-section #arrow-before,
 .testimonial-section #arrow-next {
   height: 30px;
   border: none;
   background-color: #fdfdfd;
+  color: #e8e8e8;
   cursor: pointer;
 }
 .testimonial-section #arrow-before:disabled,

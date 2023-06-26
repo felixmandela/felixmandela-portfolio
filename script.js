@@ -106,6 +106,7 @@ function hideNavLinks() {
 function showNavLinks() {
   navLinks.style.display = "flex";
 }
+
 burger.addEventListener("click", () => {
   if (navLinks.style.display === "flex") {
     hideNavLinks();
@@ -116,15 +117,17 @@ burger.addEventListener("click", () => {
 
 // click outside the burger area will close it
 window.addEventListener("click", (e) => {
-  const isClickInside = navLinksWrapper.contains(e.target);
-  if (!isClickInside) {
-    hideNavLinks();
+  if (window.innerWidth <= 650) {
+    const isClickInside = navLinksWrapper.contains(e.target);
+    if (!isClickInside) {
+      hideNavLinks();
+    }
   }
 });
 
 [...navLinksItems].map((m) => {
   m.addEventListener("click", (e) => {
-    if (e.target) {
+    if (e.target && window.innerWidth <= 650) {
       hideNavLinks();
     }
   });
@@ -209,7 +212,7 @@ function getCurrentTestimonial() {
   testimonialsBox.style.opacity = 0;
   setTimeout(() => {
     testimonialsBox.style.opacity = 1;
-    testimonialsBox.innerHTML = `<div class="testimonial-quote"></div>
+    testimonialsBox.innerHTML = `<div class="fa-solid fa-quote-right testimonial-quote"></div>
     <p id="testimonial-message">${testimonials[currentSlide].message}</p>
     <img src="${testimonials[currentSlide].image}" id="testimonial-image">
     <h3 id="testimonial-name">${testimonials[currentSlide].name}</h3>
