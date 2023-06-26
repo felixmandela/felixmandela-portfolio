@@ -100,7 +100,7 @@ function scrollAnimation() {
 }
 
 //dark mode
-const r = document.querySelector(":root");
+const root = document.querySelector(":root");
 const textColor = { light: "#111", dark: "#eeeeee" };
 const backgroundColor = { light: "#fdfdfd", dark: "#0f111a" };
 const borderColor = { light: "#e8e8e8", dark: "#313131" };
@@ -112,41 +112,59 @@ const anchorColor = { light: "#048ee4", dark: "#8cc0e0" };
 const darkModeButtonColor = { light: "#f8fbff", dark: "#20243d" };
 const darkHoverBackground = { light: "#0f111a", dark: "#fdfdfd" };
 const darkHoverText = { light: "#eeeeee", dark: "#111" };
-let isDarkMode = false;
-function setDarkMode() {
-  isDarkMode = !isDarkMode;
+let theme = localStorage.getItem("theme") || "light";
+function switchTheme() {
+  if (theme === "light") {
+    theme = "dark";
+  } else {
+    theme = "light";
+  }
 }
-darkModeButton.addEventListener("click", () => {
-  if (isDarkMode) {
+
+function setTheme() {
+  if (theme === "light") {
     darkModeButton.innerHTML =
       '<i class="fa-solid fa-moon dark-mode-logo"></i> Dark';
-    r.style.setProperty("--text-color", textColor.light);
-    r.style.setProperty("--background-color", backgroundColor.light);
-    r.style.setProperty("--border-color", borderColor.light);
-    r.style.setProperty("--secondary-color-1", secondaryColor1.light);
-    r.style.setProperty("--secondary-color-2", secondaryColor2.light);
-    r.style.setProperty("--remote-bg", remoteBackground.light);
-    r.style.setProperty("--remote-text", remoteText.light);
-    r.style.setProperty("--anchor-color", anchorColor.light);
-    r.style.setProperty("--dark-mode-button-color", darkModeButtonColor.light);
-    r.style.setProperty("--dark-hover-bg", darkHoverBackground.light);
-    r.style.setProperty("--dark-hover-text", darkHoverText.light);
+    root.style.setProperty("--text-color", textColor.light);
+    root.style.setProperty("--background-color", backgroundColor.light);
+    root.style.setProperty("--border-color", borderColor.light);
+    root.style.setProperty("--secondary-color-1", secondaryColor1.light);
+    root.style.setProperty("--secondary-color-2", secondaryColor2.light);
+    root.style.setProperty("--remote-bg", remoteBackground.light);
+    root.style.setProperty("--remote-text", remoteText.light);
+    root.style.setProperty("--anchor-color", anchorColor.light);
+    root.style.setProperty(
+      "--dark-mode-button-color",
+      darkModeButtonColor.light
+    );
+    root.style.setProperty("--dark-hover-bg", darkHoverBackground.light);
+    root.style.setProperty("--dark-hover-text", darkHoverText.light);
   } else {
     darkModeButton.innerHTML =
       '<i class="fa-solid fa-sun dark-mode-logo"></i> Light';
-    r.style.setProperty("--text-color", textColor.dark);
-    r.style.setProperty("--background-color", backgroundColor.dark);
-    r.style.setProperty("--border-color", borderColor.dark);
-    r.style.setProperty("--secondary-color-1", secondaryColor1.dark);
-    r.style.setProperty("--secondary-color-2", secondaryColor2.dark);
-    r.style.setProperty("--remote-bg", remoteBackground.dark);
-    r.style.setProperty("--remote-text", remoteText.dark);
-    r.style.setProperty("--anchor-color", anchorColor.dark);
-    r.style.setProperty("--dark-mode-button-color", darkModeButtonColor.dark);
-    r.style.setProperty("--dark-hover-bg", darkHoverBackground.dark);
-    r.style.setProperty("--dark-hover-text", darkHoverText.dark);
+    root.style.setProperty("--text-color", textColor.dark);
+    root.style.setProperty("--background-color", backgroundColor.dark);
+    root.style.setProperty("--border-color", borderColor.dark);
+    root.style.setProperty("--secondary-color-1", secondaryColor1.dark);
+    root.style.setProperty("--secondary-color-2", secondaryColor2.dark);
+    root.style.setProperty("--remote-bg", remoteBackground.dark);
+    root.style.setProperty("--remote-text", remoteText.dark);
+    root.style.setProperty("--anchor-color", anchorColor.dark);
+    root.style.setProperty(
+      "--dark-mode-button-color",
+      darkModeButtonColor.dark
+    );
+    root.style.setProperty("--dark-hover-bg", darkHoverBackground.dark);
+    root.style.setProperty("--dark-hover-text", darkHoverText.dark);
   }
-  setDarkMode();
+}
+
+setTheme();
+
+darkModeButton.addEventListener("click", () => {
+  switchTheme();
+  setTheme();
+  localStorage.setItem("theme", theme);
 });
 
 // burger animation
@@ -190,6 +208,8 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 720) {
     showNavLinks();
   } else hideNavLinks();
+  darkModeButton.style.opacity = 1;
+  navLinks.style.opacity = 1;
 });
 
 // testimonials slide animation
