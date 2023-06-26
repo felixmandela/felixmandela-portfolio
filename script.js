@@ -1,16 +1,21 @@
+const navLinks = document.getElementById("nav-links");
+const navLinksItems = document.querySelectorAll("#nav-links>li");
+const navLinksWrapper = document.getElementById("nav-links-wrapper");
+const darkModeButton = document.getElementById("dark-mode-button");
+const burger = document.getElementById("burger");
+const nameHide = document.getElementsByClassName("name-hide");
+const nameInitialTwo = document.getElementById("name-initial-2");
+const siteTitle = document.getElementById("site-title");
+const header = document.getElementById("header");
+
 // navbar animation
 window.addEventListener("scroll", scrollAnimation);
 let currPos = window.scrollY;
 
 function scrollAnimation() {
-  const nameHide = document.getElementsByClassName("name-hide");
-  const nameInitialTwo = document.getElementById("name-initial-2");
-  const navLinks = document.getElementById("nav-links");
-  const siteTitle = document.getElementById("site-title");
-  const header = document.getElementById("header");
   const containerWidth = document.getElementById("nav-container").clientWidth;
-  let mediaQuery1 = 650;
   const screenWidth = window.innerWidth;
+  let mediaQuery1 = 720;
   const animationDelay = 0.25;
 
   function animationNumber(n) {
@@ -32,6 +37,7 @@ function scrollAnimation() {
 
     // make the text visible
     setAnimation("opacity", navLinks, "1", animationNumber(2));
+    setAnimation("opacity", darkModeButton, "1");
     for (let i = 0; i < nameHide.length; i++) {
       setAnimation("opacity", nameHide[i], "1", animationNumber(2));
     }
@@ -40,6 +46,7 @@ function scrollAnimation() {
   function scrollDownAnimation() {
     // make text invisible
     setAnimation("opacity", navLinks, "0", animationNumber(0));
+    setAnimation("opacity", darkModeButton, "0", animationNumber(0));
     for (let i = 0; i < nameHide.length; i++) {
       setAnimation("opacity", nameHide[i], "0", animationNumber(0));
     }
@@ -92,19 +99,64 @@ function scrollAnimation() {
   }
 }
 
+//dark mode
+const r = document.querySelector(":root");
+const textColor = { light: "#111", dark: "#eeeeee" };
+const backgroundColor = { light: "#fdfdfd", dark: "#0f111a" };
+const borderColor = { light: "#e8e8e8", dark: "#313131" };
+const secondaryColor1 = { light: "#e4e4e4", dark: "#1b1b1b" };
+const secondaryColor2 = { light: "#828282", dark: "#7d7d7d" };
+const remoteBackground = { light: "#c7e995", dark: "#ceeba2" };
+const remoteText = { light: "#111", dark: "#111" };
+const anchorColor = { light: "#048ee4", dark: "#8cc0e0" };
+const darkModeButtonColor = { light: "#f8fbff", dark: "#20243d" };
+const darkHoverBackground = { light: "#0f111a", dark: "#fdfdfd" };
+const darkHoverText = { light: "#eeeeee", dark: "#111" };
+let isDarkMode = false;
+function setDarkMode() {
+  isDarkMode = !isDarkMode;
+}
+darkModeButton.addEventListener("click", () => {
+  if (isDarkMode) {
+    darkModeButton.innerHTML =
+      '<i class="fa-solid fa-moon dark-mode-logo"></i> Dark';
+    r.style.setProperty("--text-color", textColor.light);
+    r.style.setProperty("--background-color", backgroundColor.light);
+    r.style.setProperty("--border-color", borderColor.light);
+    r.style.setProperty("--secondary-color-1", secondaryColor1.light);
+    r.style.setProperty("--secondary-color-2", secondaryColor2.light);
+    r.style.setProperty("--remote-bg", remoteBackground.light);
+    r.style.setProperty("--remote-text", remoteText.light);
+    r.style.setProperty("--anchor-color", anchorColor.light);
+    r.style.setProperty("--dark-mode-button-color", darkModeButtonColor.light);
+    r.style.setProperty("--dark-hover-bg", darkHoverBackground.light);
+    r.style.setProperty("--dark-hover-text", darkHoverText.light);
+  } else {
+    darkModeButton.innerHTML =
+      '<i class="fa-solid fa-sun dark-mode-logo"></i> Light';
+    r.style.setProperty("--text-color", textColor.dark);
+    r.style.setProperty("--background-color", backgroundColor.dark);
+    r.style.setProperty("--border-color", borderColor.dark);
+    r.style.setProperty("--secondary-color-1", secondaryColor1.dark);
+    r.style.setProperty("--secondary-color-2", secondaryColor2.dark);
+    r.style.setProperty("--remote-bg", remoteBackground.dark);
+    r.style.setProperty("--remote-text", remoteText.dark);
+    r.style.setProperty("--anchor-color", anchorColor.dark);
+    r.style.setProperty("--dark-mode-button-color", darkModeButtonColor.dark);
+    r.style.setProperty("--dark-hover-bg", darkHoverBackground.dark);
+    r.style.setProperty("--dark-hover-text", darkHoverText.dark);
+  }
+  setDarkMode();
+});
+
 // burger animation
-const burger = document.getElementById("burger");
-const navLinks = document.getElementById("nav-links");
-const navLinksItems = document.querySelectorAll("#nav-links>li");
-const navLinksWrapper = document.getElementById("nav-links-wrapper");
-
-console.log([...navLinksItems].map((e) => e.target));
-
 function hideNavLinks() {
   navLinks.style.display = "none";
+  darkModeButton.style.display = "none";
 }
 function showNavLinks() {
   navLinks.style.display = "flex";
+  darkModeButton.style.display = "block";
 }
 
 burger.addEventListener("click", () => {
@@ -117,7 +169,7 @@ burger.addEventListener("click", () => {
 
 // click outside the burger area will close it
 window.addEventListener("click", (e) => {
-  if (window.innerWidth <= 650) {
+  if (window.innerWidth <= 720) {
     const isClickInside = navLinksWrapper.contains(e.target);
     if (!isClickInside) {
       hideNavLinks();
@@ -127,7 +179,7 @@ window.addEventListener("click", (e) => {
 
 [...navLinksItems].map((m) => {
   m.addEventListener("click", (e) => {
-    if (e.target && window.innerWidth <= 650) {
+    if (e.target && window.innerWidth <= 720) {
       hideNavLinks();
     }
   });
@@ -135,7 +187,7 @@ window.addEventListener("click", (e) => {
 
 // responsive, resize screen will reset the navlinks visibility
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 650) {
+  if (window.innerWidth > 720) {
     showNavLinks();
   } else hideNavLinks();
 });
