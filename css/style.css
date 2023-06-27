@@ -233,13 +233,6 @@ a {
   align-items: start;
   height: auto;
 }
-@media screen and (max-width: 425px) {
-  .home-section .container {
-    align-content: center;
-    align-items: center;
-    text-align: center;
-  }
-}
 .home-section span {
   vertical-align: middle;
 }
@@ -283,7 +276,6 @@ a {
 @media screen and (max-width: 425px) {
   .home-section .tech-stacks ul {
     margin-left: 0px;
-    justify-content: center;
   }
 }
 .home-section .tech-stacks ul li {
@@ -515,9 +507,10 @@ a {
   display: inline-block;
   position: absolute;
   top: 40px;
-  left: 337.5px;
+  left: 337px;
   box-sizing: border-box;
   border: 2px solid var(--secondary-color-2);
+  background-color: var(--secondary-color-2);
   border-radius: 50%;
   width: 24px;
   height: 24px;
@@ -536,19 +529,6 @@ a {
     height: 24px;
   }
 }
-.timeline-section .work-icon {
-  position: absolute;
-  top: 51px;
-  left: 343.5px;
-  z-index: 1;
-  background-color: var(--background-color);
-  color: var(--secondary-color-2);
-}
-@media screen and (max-width: 800px) {
-  .timeline-section .work-icon {
-    left: -41.5px;
-  }
-}
 .timeline-section .timeline-container:nth-of-type(even) {
   align-self: flex-end;
 }
@@ -556,9 +536,6 @@ a {
   .timeline-section .timeline-container:nth-of-type(even) {
     align-self: normal;
   }
-}
-.timeline-section .timeline-container:nth-of-type(even) .work-icon {
-  left: -41.5px;
 }
 .timeline-section .timeline-container:nth-of-type(even) .timeline-arrow::before {
   content: "";
@@ -590,7 +567,12 @@ a {
   }
 }
 .timeline-section .timeline-container:nth-of-type(even)::before {
-  left: -47.5px;
+  left: -48px;
+}
+@media screen and (max-width: 800px) {
+  .timeline-section .timeline-container:nth-of-type(even)::before {
+    left: -47.6px;
+  }
 }
 .timeline-section .timeline-arrow::before {
   content: "";
